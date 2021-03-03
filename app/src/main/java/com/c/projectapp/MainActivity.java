@@ -155,14 +155,14 @@ public class MainActivity extends AppCompatActivity {
 //                    password.setError("Password must be greater than 6 characters");
 //                    password.requestFocus();
 //                }
-//                else if(FirstName.isEmpty()) {
-//                    fname.setError("Please enter your first name");
-//                    fname.requestFocus();
-//                }
-//                else if(LastName.isEmpty()) {
-//                    lname.setError("Please enter your last name");
-//                    lname.requestFocus();
-//                }
+                else if(FirstName.isEmpty()) {
+                    fname.setError("Please enter your first name");
+                    fname.requestFocus();
+                }
+                else if(LastName.isEmpty()) {
+                    lname.setError("Please enter your last name");
+                    lname.requestFocus();
+                }
                 else if(Phone.isEmpty()) {
                     phone.setError("Please enter your phone number");
                     phone.requestFocus();
@@ -200,6 +200,7 @@ public class MainActivity extends AppCompatActivity {
         tvSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Please Login", Toast.LENGTH_SHORT).show();
                 Intent i = new Intent(MainActivity.this, LoginActivity.class);
                 startActivity(i);
             }
